@@ -15,3 +15,5 @@ sudo -Hu jenkins git config --global user.name Jenkins
 sudo -Hu jenkins git config --global user.email jenkins@$(hostname)
 wget -q -O - http://mirrors.jenkins-ci.org/war-stable/latest/jenkins.war > /home/jenkins/jenkins.war
 
+# Start jenkins
+sudo -Hu jenkins java -jar /home/jenkins/jenkins.war -Djava.awt.headless=true --httpPort=9080 &
